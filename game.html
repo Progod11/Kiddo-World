@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiddo World - Game Time</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff7e6;
+    }
+
+    body.girl-theme {
+      background-color: #ffe0f0;
+    }
+
+    body.boy-theme {
+      background-color: #cce5ff;
+    }
+
+    header {
+      background-color: #ffcc70;
+      padding: 20px;
+      text-align: center;
+    }
+
+    body.girl-theme header {
+      background-color: #ff6f91;
+    }
+
+    body.boy-theme header {
+      background-color: #6fa8dc;
+    }
+
+    h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .main-menu {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #ffd166;
+      border: none;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .main-menu:hover {
+      background-color: #ffcc70;
+    }
+
+    .game-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .game-box {
+      margin: 30px auto;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+
+    footer.girl-theme {
+      background-color: #ffb3c6;
+    }
+
+    footer.boy-theme {
+      background-color: #a2d2ff;
+    }
+
+    h2 {
+      color: #444;
+    }
+    #credit {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: 'Comic Sans MS', cursive;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 Game Time 🎲</h1>
+  </header>
+
+  <a href="index.html" class="main-menu">⬅ Back to Main Menu</a>
+
+  <section class="game-section">
+    <div class="game-box">
+      <h2>🧠 Memory Game</h2>
+      <iframe src="https://html5games.com/Game/Memory/HTML5" title="Memory Game"></iframe>
+    </div>
+
+    <div class="game-box">
+      <h2>🧩 Puzzle Game</h2>
+      <iframe src="https://html5games.com/Game/JigsawPuzzle/HTML5" title="Puzzle Game"></iframe>
+    </div>
+
+    <div class="game-box">
+      <h2>🚚 Drag and Drop Sorting</h2>
+      <iframe src="https://html5games.com/Game/TruckLoader/HTML5" title="Drag and Drop"></iframe>
+    </div>
+
+    <div class="game-box">
+      <h2>🔤 Alphabet Game</h2>
+      <iframe src="https://html5games.com/Game/AlphabetJump/HTML5" title="Alphabet Game"></iframe>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>© 2025 Kiddo World. All rights reserved.</p>
+    <div id="credit">Made with ❤️ by Coder Dev</div>
+  </footer>
+
+  <script>
+    window.onload = function () {
+      const gender = localStorage.getItem("kiddoGender");
+      if (gender) {
+        document.body.classList.add(gender + "-theme");
+        document.querySelector("footer").classList.add(gender + "-theme");
+      }
+    };
+  </script>
+</body>
+</html>
